@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0795F40C22D6671F007AA38F /* ShaFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0795F40B22D6671F007AA38F /* ShaFunction.swift */; };
 		2C047A6F22D5377200EF0C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C047A6E22D5377200EF0C2B /* AppDelegate.swift */; };
 		2C047A7122D5377200EF0C2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C047A7022D5377200EF0C2B /* ViewController.swift */; };
 		2C047A7422D5377200EF0C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C047A7222D5377200EF0C2B /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0795F40B22D6671F007AA38F /* ShaFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaFunction.swift; sourceTree = "<group>"; };
 		218F145CD39427CA560B3593 /* Pods_TestRealmUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestRealmUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		252C07F6C5E7F6CE1E7C249B /* Pods-TestRealmUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRealmUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRealmUITests/Pods-TestRealmUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C047A6B22D5377200EF0C2B /* TestRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				2C047A7722D5377300EF0C2B /* LaunchScreen.storyboard */,
 				2C047A7A22D5377300EF0C2B /* Info.plist */,
 				2C5A011322D596F700FDC49B /* RealmProvider.swift */,
+				0795F40B22D6671F007AA38F /* ShaFunction.swift */,
 			);
 			path = TestRealm;
 			sourceTree = "<group>";
@@ -373,7 +376,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestRealm/Pods-TestRealm-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TestRealm/Pods-TestRealm-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -384,7 +387,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestRealm/Pods-TestRealm-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestRealm/Pods-TestRealm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -398,6 +401,7 @@
 				2C047A6F22D5377200EF0C2B /* AppDelegate.swift in Sources */,
 				2C474D2D22D53AA5009F1A77 /* User.swift in Sources */,
 				2C474D2F22D53B77009F1A77 /* Todo.swift in Sources */,
+				0795F40C22D6671F007AA38F /* ShaFunction.swift in Sources */,
 				2C5A011422D596F800FDC49B /* RealmProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

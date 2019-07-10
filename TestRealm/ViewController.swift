@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var users: Results<User>?
     var notificationToken: NotificationToken?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +28,9 @@ class ViewController: UIViewController {
     
     private func insertObjetIfNotExistIntoTheRealm(){
         let realm = RealmProvider.default.realm
+        
+        print("file path: \(realm.configuration.fileURL!)")
+        print("schema version: \(realm.configuration.schemaVersion)")
         
         users = realm.objects(User.self)
         print("before \(String(describing: users?.count))")
@@ -85,5 +89,24 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func encryptDatabase(_ sender: Any) {
+        autoreleasepool{
+            
+            let tempDefaultURL = URL.inDocumentsFolder(fileName: "default_temp.realm")
+            let originalDefaultURL = URL.inDocumentsFolder(fileName: "default.realm")
+            try! FileManager.default.copyItem(at: originalDefaultURL, to: tempDefaultURL)
+            try! FileManager.default.removeItem(at: originalDefaultURL)
+            let realmConfig = Realm.Configuration(
+                fileURL:  URL.inDocumentsFolder(fileName: "default_temp.realm"))
+            
+            let realm = try! Realm(configuration: realmConfig)
+            
+            let key = "jcampostaqueria"
+            try! realm.writeCopy(toFile:originalDefaultURL, encryptionKey: key.sha512())
+            try! FileManager.default.removeItem(at: tempDefaultURL)
+            
+    
+        }
+    }
 }
 
